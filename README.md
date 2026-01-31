@@ -63,7 +63,7 @@ idf.py build
     Run the management script that signs the binary and places it at the root of the server:
 ```bash
     python iot_security_manager.py
-    ```
+```
 4.  **Starting the Server:**
 ```bash
 python ota_server_https.py
@@ -102,3 +102,4 @@ The system remained stable on the previous version.
 **Author :** [Security TEAM]
 
 **Date :** Janvier 2026
+
