@@ -4,15 +4,15 @@ This project implements a comprehensive security architecture (‘Trust Chain’
 
 ## 🚀 Key Features
 
-### 1. Sécurité Matérielle (Device Security)
+### 1. Hardware Security (Device Security)
 * **Flash Encryption :** Hardware encryption (AES-XTS) of Flash memory. Prevents physical reading of firmware and secrets (Wi-Fi keys, certificates) in the event of theft of the box.
 * **Secure Boot (V2) :** Verification of the RSA-3072 signature of the firmware at start-up via a hardware chain of trust (eFuses). Prevents unauthorised code from being executed.
 
-### 2. Mises à jour Sécurisées (Secure OTA)
+### 2. Secure Updates (Secure OTA)
 * **A/B Architecture (Rollback):** Use of a custom partition table (`partitions.csv`) with two application slots (`ota_0`, `ota_1`). If an update fails, the system automatically reverts to the previous version.
 * **Digital Signature:** Each binary update is cryptographically signed before deployment. The ESP32 verifies this signature before writing to memory.
 
-### 3. Confidentialité Réseau (Data Privacy)
+### 3. Network Privacy (Data Privacy)
 * **HTTPS / TLS :** Encrypted communication between the ESP32 and the update server.
 * **Certificate Pinning :** The ESP32 has the server's public certificate (`ca_cert.pem`) embedded in its firmware to prevent man-in-the-middle attacks.
 
@@ -102,4 +102,5 @@ The system remained stable on the previous version.
 **Author :** [Security TEAM]
 
 **Date :** Janvier 2026
+
 
